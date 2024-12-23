@@ -1,0 +1,11 @@
+#app {
+  display: flex;
+  width: 100%;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+#app section {
+  border: 1px solid skyblue;
+  padding: 10px;
+}
