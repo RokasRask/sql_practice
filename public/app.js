@@ -11,8 +11,21 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 
+var readUl = document.querySelector('#read ul');
 axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('http://localhost:6001/read').then(function (res) {
   console.log(res.data);
+  res.data.forEach(function (tree) {
+    var clone = document.querySelector('template').content.cloneNode(true);
+    var id = clone.querySelector('[data-id]');
+    var name = clone.querySelector('[data-name]');
+    var height = clone.querySelector('[data-height]');
+    var type = clone.querySelector('[data-type]');
+    id.innerText = tree.id + '.';
+    name.innerText = tree.name;
+    height.innerText = tree.height + ' m';
+    type.innerText = tree.type;
+    readUl.appendChild(clone);
+  });
 });
 
 /***/ }),

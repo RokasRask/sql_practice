@@ -35,7 +35,6 @@ app.get('/read', (req, res) => {
     const sql = `
         SELECT id, name, height, type
         FROM trees
-        ORDER BY height DESC
     `;
 
     con.query(sql, (err, data) => {
