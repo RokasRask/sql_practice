@@ -11,7 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 
-axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('http://localhost:6001/read').then(function (res) {});
+axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('http://localhost:6001/read').then(function (res) {
+  console.log(res.data);
+});
 
 /***/ }),
 
