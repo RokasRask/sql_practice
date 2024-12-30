@@ -38,3 +38,27 @@
   width: 100px;
   color: orange;
 }
+#app section#create {
+  border: 1px solid darkgoldenrod;
+  padding: 10px;
+}
+#app section#create > div {
+  display: flex;
+  flex-direction: column;
+}
+#app section#create > div input,
+#app section#create > div select {
+  margin-bottom: 10px;
+  padding: 5px;
+  outline: none;
+}
+#app section#create > div label {
+  margin-bottom: 5px;
+}
+#app section#create > div button {
+  padding: 5px;
+  background-color: darkgoldenrod;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

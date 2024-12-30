@@ -2,40 +2,40 @@
     display: flex;
     width: 100%;
     column-gap: 20px;
- 
+
     section#read {
         border: 1px solid skyblue;
         padding: 10px;
- 
+
         ul {
             list-style: none;
             padding: 0;
- 
+
             li {
                 margin-bottom: 10px;
                 display: flex;
                 column-gap: 15px;
- 
+
                 span {
                     display: inline-block;
                     font-size: 20px;
                 }
- 
+
                 span.tree-id {
                     font-weight: bold;
                     color: cadetblue;
                     width: 50px;
                 }
- 
+
                 span.tree-name {
                     width: 120px;
                 }
- 
+
                 span.tree-height {
                     width: 80px;
                     font-style: italic;
                 }
- 
+
                 span.tree-type {
                     width: 100px;
                     color: orange;
@@ -43,4 +43,34 @@
             }
         }
     }
+
+    section#create {
+        border: 1px solid darkgoldenrod;
+        padding: 10px;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+
+            input,
+            select {
+                margin-bottom: 10px;
+                padding: 5px;
+                outline: none;
+            }
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            button {
+                padding: 5px;
+                background-color: darkgoldenrod;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
 }
