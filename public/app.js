@@ -42,9 +42,18 @@ var create = function create(_) {
     read();
   });
 };
+var destroy = function destroy(_) {
+  var id = document.querySelector('#delete [data-id]').value;
+  axios__WEBPACK_IMPORTED_MODULE_0__["default"]["delete"]('http://localhost:6001/delete/' + id).then(function (res) {
+    console.log(res.data);
+    read();
+  });
+};
 read();
 var createButton = document.querySelector('#create button');
 createButton.addEventListener('click', create);
+var destroyButton = document.querySelector('#delete button');
+destroyButton.addEventListener('click', destroy);
 var formHeight = document.querySelector('[data-height]');
 var formHeightShow = document.querySelector('[data-height-show]');
 formHeight.addEventListener('input', function (_) {

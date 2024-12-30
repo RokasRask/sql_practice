@@ -38,27 +38,34 @@
   width: 100px;
   color: orange;
 }
-#app section#create {
+#app section#create, #app section#delete {
   border: 1px solid darkgoldenrod;
   padding: 10px;
 }
-#app section#create > div {
+#app section#create > div, #app section#delete > div {
   display: flex;
   flex-direction: column;
 }
 #app section#create > div input,
-#app section#create > div select {
+#app section#create > div select, #app section#delete > div input,
+#app section#delete > div select {
   margin-bottom: 10px;
   padding: 5px;
   outline: none;
 }
-#app section#create > div label {
+#app section#create > div label, #app section#delete > div label {
   margin-bottom: 5px;
 }
-#app section#create > div button {
+#app section#create > div button, #app section#delete > div button {
   padding: 5px;
   background-color: darkgoldenrod;
   color: white;
   border: none;
   cursor: pointer;
+}
+#app section#delete {
+  border: 1px solid crimson;
+}
+#app section#delete > div button {
+  background-color: crimson;
 }

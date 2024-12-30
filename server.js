@@ -75,6 +75,37 @@ app.post('/create', (req, res) => {
  
 });
 
+app.delete('/delete/:id', (req, res) => {
+   
+    // const sql = `
+    //     DELETE FROM trees
+    //     WHERE id = ${req.params.id}
+    // `;
+ 
+    // con.query(sql, (err) => {
+    //     if (err) {
+    //         res.send('Klaida trinant duomenis');
+    //         return;
+    //     }
+    //     res.send('OK');
+    // });
+ 
+    // secure delete
+ 
+    const sql = `
+        DELETE FROM trees
+        WHERE id = ?
+    `;
+ 
+    con.query(sql, [req.params.id], (err) => {
+        if (err) {
+            res.send('Klaida trinant duomenis');
+            return;
+        }
+        res.send('OK');
+    });
+});
+
 
 
 app.listen(port, () => {

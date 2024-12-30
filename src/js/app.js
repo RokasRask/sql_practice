@@ -36,10 +36,25 @@ const create = _ => {
         });
 };
 
+const destroy = _ => {
+ 
+    const id = document.querySelector('#delete [data-id]').value;
+ 
+    axios.delete('http://localhost:6001/delete/' + id)
+        .then(res => {
+            console.log(res.data);
+            read();
+        });
+   
+};
+
 read();
 
 const createButton = document.querySelector('#create button');
 createButton.addEventListener('click', create);
+
+const destroyButton = document.querySelector('#delete button');
+destroyButton.addEventListener('click', destroy);
 
 const formHeight = document.querySelector('[data-height]');
 const formHeightShow = document.querySelector('[data-height-show]');
