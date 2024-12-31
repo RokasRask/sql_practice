@@ -44,21 +44,18 @@
         }
     }
 
-    section#create, section#delete {
+    section#create, section#delete, section#edit {
         border: 1px solid darkgoldenrod;
         padding: 10px;
 
-        &>div {
+        & > div {
             display: flex;
             flex-direction: column;
-
-            input,
-            select {
+            input, select {
                 margin-bottom: 10px;
                 padding: 5px;
                 outline: none;
             }
-
             label {
                 margin-bottom: 5px;
             }
@@ -71,11 +68,12 @@
                 cursor: pointer;
             }
         }
+
     }
 
     section#delete {
         border: 1px solid crimson;
- 
+
         & > div {
             button {
                 background-color: crimson;
@@ -83,4 +81,13 @@
         }
     }
 
+    section#edit {
+        border: 1px solid green;
+
+        & > div {
+            button {
+                background-color: green;
+            }
+        }
+    }
 }
